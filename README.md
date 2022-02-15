@@ -5,3 +5,6 @@ About tab
 
 Contact page
 -Potential ways to contact, maybe live?
+
+Menu Bar
+-Constanly at the top of the page, used to go between tabs
