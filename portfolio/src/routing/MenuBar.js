@@ -7,8 +7,9 @@ function MenuBar(){
     return(
         <div style={styles}>
             <ul>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/About">About</a></li>
+                <li><a href="/Contact">Contact</a></li>
             </ul>
         </div>
     )
