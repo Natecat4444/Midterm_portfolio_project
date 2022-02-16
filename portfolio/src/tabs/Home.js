@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import MenuBar from "../routing/MenuBar";
 
 function Home(){
     const styles = {
@@ -7,6 +8,7 @@ function Home(){
     
     return(
         <div style={styles}>
+            <MenuBar />
 
         </div>
     );

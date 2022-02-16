@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {
+import { BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -11,11 +11,13 @@ import Contact from './tabs/contact';
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={Home}/>
-        <Route path= "About" element={About}/>
-        <Route path="Contact" element={Contact}/>
-      </Routes>
+      <Router>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
