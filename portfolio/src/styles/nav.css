@@ -4,4 +4,5 @@ ul#navbar{
 
 ul#navbar li{
 	display: inline;
+    padding: 10px;
 }

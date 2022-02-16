@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
+import MenuBar from '../routing/MenuBar';
 
-function Contact(){
-    const style ={
+class Contact extends Component{
+    constructor(props){
         
     }
+    render(){
     return(
-        <div style={style}>
+        <div style>
+            <MenuBar />
+            
             
         </div>
     );
+    }
 }
 
 export default Contact;
