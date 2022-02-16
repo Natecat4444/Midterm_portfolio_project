@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MenuBar from '../routing/MenuBar';
+
 
 class Contact extends Component{
     constructor(props){
@@ -22,8 +22,8 @@ class Contact extends Component{
         
     return(
         <div>
-            <button onClick={ (e) => {this.contact("nkaufman1998@gmail.com")}}>Email</button>
-            <button onClick={ (e) => {this.contact("Please use email to aquire cell number at this time")}}>Phone</button>
+            <button className="btn btn-primary" onClick={ (e) => {this.contact("nkaufman1998@gmail.com")}}>Email</button>
+            <button className="btn btn-success" onClick={ (e) => {this.contact("Please use email to aquire cell number at this time")}}>Phone</button>
             <p>{this.state.method}</p>
             
         </div>

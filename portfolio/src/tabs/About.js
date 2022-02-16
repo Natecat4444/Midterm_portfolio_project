@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuBar from '../routing/MenuBar';
 
 function About(){
     const style ={
