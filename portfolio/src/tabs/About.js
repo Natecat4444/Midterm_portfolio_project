@@ -6,7 +6,7 @@ function About(){
     }
     return(
         <div style={style}>
-            <p></p>
+            <p>Nathan Kaufman graduated from the Rochester Institue of Technology in May of 2021.</p>
         </div>
     );
 }
