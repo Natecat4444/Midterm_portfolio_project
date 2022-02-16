@@ -7,10 +7,12 @@ import { BrowserRouter as Router,
 import Home from './tabs/Home';
 import About from './tabs/About';
 import Contact from './tabs/contact';
+import MenuBar from './routing/MenuBar';
 
 function App() {
   return (
     <div className="App">
+      <MenuBar />
       <Router>
         <Routes>
         <Route path="/" element={<Home />} />

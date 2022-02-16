@@ -8,7 +8,6 @@ function Home(){
     
     return(
         <div style={styles}>
-            <MenuBar />
 
         </div>
     );
