@@ -1,7 +1,34 @@
 import React, {useState} from "react";
 
+function Battleship(props){
+    return(<div>
+        <a href="">Github Repo</a>
+        <p></p>
+    </div>)
+}
 
-function Home(){
+function Planner(props){
+    return(<div>
+        <a href="">Github Repo</a>
+        <p></p>
+    </div>)
+}
+
+function SteamAPI(props){
+    return(<div>
+        <a href="">Github Repo</a>
+        <p></p>
+    </div>)
+}
+
+function Moonfall(props){
+    return(<div>
+        <a href="">Github Repo</a>
+        <p></p>
+    </div>)
+}
+
+function Home(props){
     const styles = {
         'textAlign': 'center',
         'paddingLeft': '25%',
