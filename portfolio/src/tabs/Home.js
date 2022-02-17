@@ -4,6 +4,7 @@ import Defaultview from "./projects/DefaultView";
 import Planner from "./projects/Planner";
 import SteamAPI from "./projects/SteamApi";
 import Moonfall from "./projects/Moonfall";
+import { ProjectList, ProjectOptions } from "./projects/ProjectsList";
 
 function Home(props){
     const[viewcomp, setveiwcomp] = useState(0);
@@ -46,13 +47,7 @@ function Home(props){
             <p><a href='https://github.com/Natecat4444'>Github Profile</a></p>
             <hr />
             <form>
-                <select name={viewcomp} onChange={(event) => setveiwcomp(event.target.value)}>
-                    <option>Select Project</option>
-                    <option name={viewcomp} value={1}>Battleship</option>
-                    <option name={viewcomp} value={2}>Planner</option>
-                    <option name={viewcomp} value={3}>SteamAPI</option>
-                    <option name={viewcomp} value={4}>Moonfall</option>
-                </select>
+                <ProjectList />
                
             </form>
             <br />
