@@ -47,7 +47,7 @@ function Home(props){
             <p><a href='https://github.com/Natecat4444'>Github Profile</a></p>
             <hr />
             <form>
-                <ProjectList />
+                <ProjectList name={viewcomp} onChange={(event) => setveiwcomp(event.target.value)}/>
                
             </form>
             <br />
