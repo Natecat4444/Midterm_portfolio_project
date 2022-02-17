@@ -61,15 +61,6 @@ function Home(props){
     const fontplus = () => { setfontsize(fontsize+1)}
     const fontminus = () => { setfontsize(fontsize-1)}
 
-    const handleSubmit = (event) => {
-        console.log("Handle sublit called")
-        console.log(event.target.value)
-        setveiwcomp(viewcomp)
-        console.log(viewcomp)
-        event.preventDefault();
-
-    }
-
     let view = <Defaultview />;
 
     console.log(viewcomp);
