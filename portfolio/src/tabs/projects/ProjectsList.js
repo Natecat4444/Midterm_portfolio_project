@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Battleship from "./Battleship";
 import SteamAPI from "./SteamApi";
 import Moonfall from "./Moonfall";
@@ -6,14 +6,16 @@ import Defaultview from "./DefaultView";
 import Planner from "./Planner";
 
 function ProjectOptions(props){
-    console.log(props.items)
-    const viewcomp = null;
+    console.log("Viewhandler: "+props.viewhandler)
+    console.log("Name: "+props.name)
+    console.log("Test: "+props.settest)
+    console.log("props: "+props)
     const options = props.items.map(
-        (item) => <option value={item.id} name={viewcomp} key={item.id}>{item.value}</option>
+        (item) => <option value={item.id} name={props.name} key={item.id}>{item.value}</option>
     );
 
     return(
-        <select>
+        <select name = {props.name} onChange={(event) => props.viewhandler(event.target.value)}>
             {options}
         </select>
     );
@@ -51,7 +53,7 @@ function ProjectList(props){
             view: <Moonfall />
         }
     ]
-    return (<ProjectOptions items = {projects}/>)
+    return (<ProjectOptions name={props.name} settest={props.settest} viewhandler = {props.viewhandler} items = {projects}/>)
 }
 
 export {ProjectOptions, ProjectList}

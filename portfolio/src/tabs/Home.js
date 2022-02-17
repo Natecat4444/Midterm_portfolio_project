@@ -4,7 +4,9 @@ import Defaultview from "./projects/DefaultView";
 import Planner from "./projects/Planner";
 import SteamAPI from "./projects/SteamApi";
 import Moonfall from "./projects/Moonfall";
-import { ProjectList, ProjectOptions } from "./projects/ProjectsList";
+import { ProjectList} from "./projects/ProjectsList";
+import {Button} from 'react-bootstrap';
+
 
 function Home(props){
     const[viewcomp, setveiwcomp] = useState(0);
@@ -19,9 +21,11 @@ function Home(props){
     const fontplus = () => { setfontsize(fontsize+1)}
     const fontminus = () => { setfontsize(fontsize-1)}
 
+    const viewhandler = (value) => {setveiwcomp(value)}
+
     let view = <Defaultview />;
 
-    console.log(viewcomp);
+    console.log("viewcomp: "+viewcomp);
     if(viewcomp == 1){
         view = <Battleship />;
         console.log("view set to battleship")
@@ -47,8 +51,8 @@ function Home(props){
             <p><a href='https://github.com/Natecat4444'>Github Profile</a></p>
             <hr />
             <form>
-                <ProjectList name={viewcomp} onChange={(event) => setveiwcomp(event.target.value)}/>
-               
+                {/* <ProjectList name={viewcomp} onChange={(event) => setveiwcomp(event.target.value)}/> */}
+                <ProjectList name={viewcomp} viewhandler={viewhandler} settest={5}/> 
             </form>
             <br />
 
@@ -58,8 +62,8 @@ function Home(props){
             <footer>
                 
                 <p>Adjust font size</p>
-                <button onClick={fontplus} className="btn btn-primary">+</button>
-                <button onClick={fontminus} className="btn btn-danger">-</button>
+                <Button variant="primary" onClick={fontplus} >+</Button>{' '}
+                <Button onClick={fontminus} className="btn btn-danger">-</Button>
             </footer>
 
         </div>
