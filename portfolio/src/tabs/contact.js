@@ -6,6 +6,7 @@ class Contact extends Component{
         super();
         this.state = {
             method: "Please select a contact method",
+            msg: ""
         }
 
         this.contact = this.contact.bind(this);
@@ -18,6 +19,10 @@ class Contact extends Component{
         )
     }
 
+    componentDidUpdate(){
+
+    }
+
     render(){
         
     return(
@@ -25,6 +30,7 @@ class Contact extends Component{
             <button className="btn btn-primary" onClick={ (e) => {this.contact("nkaufman1998@gmail.com")}}>Email</button>
             <button className="btn btn-success" onClick={ (e) => {this.contact("Please use email to aquire cell number at this time")}}>Phone</button>
             <p>{this.state.method}</p>
+            <p>{this.state.msg}</p>
             
         </div>
     );

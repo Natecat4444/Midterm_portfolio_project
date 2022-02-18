@@ -1,12 +1,13 @@
 import React from "react";
+import {Button} from 'react-bootstrap';
 
 function MenuBar(){
     return(
         <div >
             <ul id="navbar">
-                <li><a href="/">Home</a></li>
-                <li><a href="/About">About</a></li>
-                <li><a href="/Contact">Contact</a></li>
+                <li><Button variant='link'><a href="/">Home</a></Button></li>
+                <li><Button variant='link'><a href="/About">About</a></Button></li>
+                <li><Button variant='link'><a href="/Contact">Contact</a></Button></li>
             </ul>
         </div>
     )
